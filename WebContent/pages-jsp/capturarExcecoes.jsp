@@ -21,7 +21,7 @@
 		<table class="table">
 			<tr  scope="row" >
 				<td>
-					<a href="index.jsp"><img src="resources/img/home.png" alt="Voltar"/></a>
+					<a href="..\index.jsp"><img src="../resources/img/home.png" alt="Voltar"/></a>
 				</td>
 				<td><h3 style="margin-left: 25%">Capturar Exceções com jQuery</h3></td>
 			</tr>		

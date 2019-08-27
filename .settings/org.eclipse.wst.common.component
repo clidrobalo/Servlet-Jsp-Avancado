@@ -2,7 +2,6 @@
     <wb-module deploy-name="Servlet-Jsp-Avancado">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Servlets"/>
         <property name="context-root" value="Servlet-Jsp-Avancado"/>
         <property name="java-output-path" value="/Servlet-Jsp-Avancado/build/classes"/>
     </wb-module>

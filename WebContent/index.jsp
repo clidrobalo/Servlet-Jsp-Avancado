@@ -23,7 +23,10 @@
 					<th scope="col" class="d-flex justify-content-center">Topicos</th>
 				</thead>
 				<tr scope="row">
-					<td><a href="capturarExcecoes.jsp">Capturar Exceções com jQuery</a></td>
+					<td><a href="pages-jsp/capturarExcecoes.jsp">Capturar Exceções com jQuery</a></td>
+				</tr>
+				<tr scope="row">
+					<td><a href="pages-jsp/acessarSistema.jsp">Acessar Sistema</a></td>
 				</tr>
 			</table>
 		</div>
