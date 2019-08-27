@@ -22,6 +22,18 @@ public class ServletAutenticacao extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String valueDeslogar = request.getParameter("deslogar");
+		
+		if(Boolean.parseBoolean(valueDeslogar)) {
+			HttpServletRequest req = (HttpServletRequest) request;
+			HttpSession session = req.getSession();
+			//Terminar sessão - remover ususario da sessão
+			session.invalidate();
+			
+			System.out.println("Deslogado...");
+			
+			response.sendRedirect("../index.jsp");
+		}
 	}
 
 	

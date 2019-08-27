@@ -43,9 +43,15 @@ public class FilterAutenticacao implements Filter{
 		
 		String receiveUrl = req.getServletPath();
 		//receiveUrl = "/" + receiveUrl.split("/")[2];
+		
 		System.out.println(receiveUrl);
 		
+		String dados[] = receiveUrl.split("/");
+		if(dados[1].equals(dados[2])) {
+			receiveUrl = "/" + dados[2] + "/" +dados[3];
+		}
 		
+		System.out.println(receiveUrl);
 		//Verificar se usuario não esta logado e se o evento não veio da pagina de autenticação
 		if(usuario == null && !receiveUrl.equals("/pages-jsp/ServletAutenticacao")) {
 			request.setAttribute("urlParam", receiveUrl);

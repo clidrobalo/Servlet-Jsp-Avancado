@@ -13,6 +13,7 @@
 <body>
 
 	<div style="background-color: tomato; color: #FFF; text-align: center; padding: 10px;">
+		<a href="pages-jsp/ServletAutenticacao?deslogar=true"><button  style="float: right; background-color: gray; padding: 10px; color: #FFF; border: 0px;" >Deslogar</button></a>
 		<h1>Recursos Avançados em Java Web - Servlet&Jsp</h1>
 	</div>
 	
@@ -31,5 +32,7 @@
 			</table>
 		</div>
 	</center>
+	
+	
 </body>
 </html>

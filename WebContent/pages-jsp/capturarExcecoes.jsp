@@ -18,6 +18,7 @@
 <body>
 
 	<div style="background-color: #006400; color: #FFF; padding: 10px; margin-bottom: 10px;">
+		<a href="ServletAutenticacao?deslogar=true"><button  style="float: right; background-color: gray; padding: 10px; color: #FFF; border: 0px;" >Deslogar</button></a>
 		<table class="table">
 			<tr  scope="row" >
 				<td>
