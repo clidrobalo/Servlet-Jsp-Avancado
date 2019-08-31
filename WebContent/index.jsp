@@ -33,6 +33,9 @@
 				<tr scope="row">
 					<td><a href="pages-jsp/paginaPai.jsp">Load pagina com jQuery</a></td>
 				</tr>
+				<tr scope="row">
+					<td><a href="pages-jsp/progessBar.jsp">Barra de progesso com JS e jQuery</a></td>
+				</tr>
 			</table>
 		</div>
 	</center>
