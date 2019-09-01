@@ -10,3 +10,20 @@
 	height: 30px;
 	background-color: #4caf50;
 }
+
+.ui-progressbar {
+    position: relative;
+    background-color: #ddd;
+    color:red;
+    width:650px;
+    margin-left:auto;
+    margin-right:auto;
+}
+  .progress-label {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+    margin-left:-40px;
+  }
