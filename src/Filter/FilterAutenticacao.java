@@ -13,7 +13,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import Beans.Usuario;
+import Beans.UsuarioBean;
 
 //Interceptar todas as requisições
 //@WebFilter(urlPatterns = {"/*"}) 
@@ -39,7 +39,7 @@ public class FilterAutenticacao implements Filter{
 		
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpSession session = req.getSession();
-		Usuario usuario = (Usuario) session.getAttribute("usuario");
+		UsuarioBean usuario = (UsuarioBean) session.getAttribute("usuario");
 		
 		String receiveUrl = req.getServletPath();
 		//receiveUrl = "/" + receiveUrl.split("/")[2];

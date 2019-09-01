@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import Beans.Usuario;
+import Beans.UsuarioBean;
+import dao.DaoUsuario;
 
 /**
  * Servlet implementation class ServletAutenticacao
@@ -20,6 +21,8 @@ public class ServletAutenticacao extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 
+	DaoUsuario daoUsuario = new DaoUsuario();
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String valueDeslogar = request.getParameter("deslogar");
@@ -46,16 +49,14 @@ public class ServletAutenticacao extends HttpServlet {
 		/**
 		 * validar login e senha
 		 */
-		String login = "Clid Robalo";
-		String senha = "1234";
-		
-		System.out.println("chegou");
-		
-		Usuario usuario = new Usuario();
-		usuario.setLogin(loginParam);
+		UsuarioBean usuario = new UsuarioBean();
+		usuario.setUser(loginParam);
 		usuario.setSenha(senhaParam);
 		
-		if(loginParam.equals(login) && senhaParam.equals(senha)) {
+		System.out.println("chegou ao servlet");
+
+		if(daoUsuario.userExiste(loginParam)) {
+			usuario = daoUsuario.getUser(loginParam);
 			
 			//Settar usuario na sessão
 			HttpServletRequest req = (HttpServletRequest) request;

@@ -42,7 +42,7 @@
 					<tr>
 						<th scope="row">Login</th>
 						<td>
-							<input type="text" value="${usuario.login }" name="login" style="width: 100%;" placeholder="   Login..." required>
+							<input type="text" value="${usuario.user }" name="login" style="width: 100%;" placeholder="   Login..." required>
 						</td>
 					</tr>
 					<tr>

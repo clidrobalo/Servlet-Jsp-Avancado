@@ -36,6 +36,9 @@
 				<tr scope="row">
 					<td><a href="pages-jsp/progessBar.jsp">Barra de progesso com JS e jQuery</a></td>
 				</tr>
+				<tr scope="row">
+					<td><a href="pages-jsp/upload.jsp">Upload Imagem</a></td>
+				</tr>
 			</table>
 		</div>
 	</center>
