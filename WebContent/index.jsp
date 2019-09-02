@@ -39,6 +39,9 @@
 				<tr scope="row">
 					<td><a href="pages-jsp/upload.jsp">Upload Imagem</a></td>
 				</tr>
+				<tr scope="row">
+					<td><a href="pages-jsp/dataTableJquery.jsp">Data Table com jQuery</a></td>
+				</tr>
 			</table>
 		</div>
 	</center>
