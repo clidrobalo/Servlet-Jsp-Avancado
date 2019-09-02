@@ -148,6 +148,25 @@ private Connection connection;
 		return imagens;
 	}
 	
+	public String getImage(Long id) {
+		String query = "select imagem from usuario where id = ?";
+		
+		try {
+			PreparedStatement select = connection.prepareStatement(query);
+			select.setLong(1, id);
+			
+			ResultSet result = select.executeQuery();
+		
+			while(result.next()) {
+				return result.getString("imagem");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
 	
 	public void delete(Long id) {
 		String query = "DELETE FROM usuario WHERE id = ?"; 

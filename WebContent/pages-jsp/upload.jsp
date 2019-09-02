@@ -62,7 +62,7 @@
 		</div>
 		<div>
 			<c:if test="${imagem != null }">
-				<img alt="Imagem"  src="${imagem }" width="200"/>
+				<a href="fileUpload?acao=download"><img alt="Imagem"  src="${imagem }" width="200"/></a>
 			</c:if> 		
 			
 			<c:forEach var="imagem" items="${imagens }">
