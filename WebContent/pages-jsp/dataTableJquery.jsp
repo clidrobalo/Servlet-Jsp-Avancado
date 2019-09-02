@@ -50,7 +50,7 @@
 $(document).ready(function() {
     $('#example').DataTable( {
         "processing": true,
-        "serverSide": true,
+        "serverSide": false,
         "ajax": "carregarDadosDataTable" //Url para Retorno dos dados do servidor
     } );
 } );
