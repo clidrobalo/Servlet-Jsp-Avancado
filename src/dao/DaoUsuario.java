@@ -125,6 +125,30 @@ private Connection connection;
 		return lista;
 	}
 	
+	public List<String> getImages() {
+		List<String> imagens = new ArrayList<String>();
+
+		String query = "SELECT imagem FROM usuario where imagem IS NOT NULL";
+
+		try {
+			PreparedStatement select = connection.prepareStatement(query);
+			ResultSet resultado = select.executeQuery();
+
+			while (resultado.next()) {
+				String imagem = (resultado.getString("imagem"));
+				imagens.add(imagem);
+			}
+
+			return imagens;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return imagens;
+	}
+	
+	
 	public void delete(Long id) {
 		String query = "DELETE FROM usuario WHERE id = ?"; 
 		

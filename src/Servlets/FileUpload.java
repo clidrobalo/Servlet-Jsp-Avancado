@@ -1,6 +1,9 @@
 package Servlets;
 
 import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,6 +26,30 @@ public class FileUpload extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		//get session user
+		HttpServletRequest req = (HttpServletRequest) request;
+		HttpSession session = req.getSession();
+		UsuarioBean usuario = (UsuarioBean) session.getAttribute("usuario");
+		
+		String acao = request.getParameter("acao");
+		System.out.println(acao);
+		
+		//load and send image of user
+		usuario = daoUsuario.getUser(usuario.getUser());
+		RequestDispatcher dispatcher = request.getRequestDispatcher("upload.jsp");
+				
+		if(acao.equals("getImage")) {
+			if(usuario.getImagem() != null) {
+				request.setAttribute("imagem", usuario.getImagem());
+			}
+		} else if(acao.equals("getImages")) {
+			List<String> imagens = daoUsuario.getImages();
+			System.out.println("-> " + imagens.get(0));
+			request.setAttribute("imagens", imagens);
+		}
+		
+		
+		dispatcher.forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

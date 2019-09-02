@@ -67,6 +67,7 @@ public class ServletAutenticacao extends HttpServlet {
 			System.out.println("Url param: " + urlParam);	
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher(urlParam);
+			request.setAttribute("usuario", usuario);
 			dispatcher.forward(request, response);
 		} else {
 			request.setAttribute("urlParam", urlParam);

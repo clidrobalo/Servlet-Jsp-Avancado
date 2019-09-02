@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,8 +52,27 @@
 		</div>
 		<hr>
 		<h4 id="respostaUpload" style="color: #00b16a"></h4>
+		
+		<div class="bg-white p-5">
+			Verificar se ja existe imagem do utilizador na base de dados<br>
+			<a href="fileUpload?acao=getImage"><button>Carregar imagem</button></a>
+			<hr>
+			Verificar se ja existe imagens dos utilizadores na base de dados<br>
+			<a href="fileUpload?acao=getImages"><button>Carregar imagens</button></a>
+		</div>
+		<div>
+			<c:if test="${imagem != null }">
+				<img alt="Imagem"  src="${imagem }" width="200"/>
+			</c:if> 		
+			
+			<c:forEach var="imagem" items="${imagens }">
+				<img alt="Imagem"  src="${imagem }" width="200"/>
+			</c:forEach>
+		</div>
 	
 	</div>
+	
+	
 </body>
 
 <script>
